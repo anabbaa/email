@@ -1,17 +1,17 @@
 
 
-const validemail2 =(str)=>{
-    
-let at = str.indexOf("@");
-let dot = str.lastIndexOf(".");
+const validemail3 =(str)=>{
+    let at;
+    let dot;
+     str.split("").map((item,index)=> item === "@" ? at = index: null);
 
-    
-    if (at > 0 && dot >  at){
-        return   `${str} is valid`;
+     str.split("").map((item, index)=> item === "." ? dot = index: null);
+    console.log(dot);
+    if (at > 0 && dot > at ){
+        return "its valid email"
     }
     else {
-          return  `please enter valid ${str}`;
+        return "please enter valid email";
     }
 }
-    
-    console.log(validemail2("ahmed@gmail.com"));
+console.log(validemail3("ahmes@gmail.com"));
